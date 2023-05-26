@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26/"
+     xml:base="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/"
+     xmlns:metadata="http://data.bioontology.org/metadata/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26">
+        <owl:imports rdf:resource="http://sweetontology.net/sweetAll"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#has_address -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#has_address"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#has_country -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#has_country"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#has_location -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#has_location"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweetontology.net/humanJurisdiction/AdministrativeRegion -->
+
+    <rdf:Description rdf:about="http://sweetontology.net/humanJurisdiction/AdministrativeRegion">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#has_address"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#address"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#POI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#POI">
+        <rdfs:subClassOf rdf:resource="http://sweetontology.net/reprDataServiceGeospatial/Map"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#address -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#address">
+        <rdfs:subClassOf rdf:resource="http://sweetontology.net/propSpace/SpatialProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#has_location"/>
+                <owl:someValuesFrom rdf:resource="http://sweetontology.net/propSpaceLocation/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#countrycode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#countrycode">
+        <rdfs:subClassOf rdf:resource="http://sweetontology.net/humanJurisdiction/Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#gas_content -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#gas_content">
+        <rdfs:subClassOf rdf:resource="http://sweetontology.net/propMass/MassContent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#latitude -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#latitude">
+        <rdfs:subClassOf rdf:resource="http://sweetontology.net/reprSpaceCoordinate/HorizontalCoordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#longitude -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#longitude">
+        <rdfs:subClassOf rdf:resource="http://sweetontology.net/reprSpaceCoordinate/HorizontalCoordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#oxygen_content -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#oxygen_content">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#gas_content"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#populated_place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#populated_place">
+        <rdfs:subClassOf rdf:resource="http://sweetontology.net/human/HumanActivity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#has_country"/>
+                <owl:someValuesFrom rdf:resource="http://sweetontology.net/humanJurisdiction/Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#wind_direction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mayingyu/ontologies/2023/4/untitled-ontology-26#wind_direction">
+        <rdfs:subClassOf rdf:resource="http://sweetontology.net/phenAtmoWind/Wind"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
